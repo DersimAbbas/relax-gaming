@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>comfortgaming</title>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="index.css" rel="stylesheet">
@@ -17,15 +17,14 @@
     goods page:
      --> 
  
-                
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
+     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
         <div class="container-lg">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" ></span>
             </button>
 
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="index.html">
                     <div class="d-flex align-items-center">
                         <i class="bi bi-joystick" style="color: red; font-size: 4rem; margin-right: 10px;"></i>
                         <h1 style="font-weight: bolder;line-height: 1; color: aliceblue;">COMFORT<br>GAMING</h1>
@@ -38,15 +37,23 @@
 
                 <ul class="navbar-nav me-auto fs-4">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link"href="index.html">Home</a>
                     </li>
-                    
+                
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link active" aria-current="page">About</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled" aria-disabled="true">About</a>
-                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="bi bi-cart4"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li><a class="dropdown-item" href="#">Action</a></li>
+                          <li><a class="dropdown-item" href="#">Another action</a></li>
+                          <li><hr class="dropdown-divider"></li>
+                          <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                      </li>
                 </ul>
             </div>
 
@@ -55,21 +62,19 @@
 
     <nav class="navbar navbar-expand-lg bg-primary" style="margin: 0;">
         <div class="container justify-content-center">
-            <a class="navbar-brand" href="Varor.html">Products</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Headsets</a>
-                    <a class="nav-link" href="Kontakt.html">Keyboards</a>
-                    <a class="nav-link" href="#">Gaming-PC</a>
-                    <a class="nav-link active" aria-current="page" href="#">Monitors</a>
-                    <a class="nav-link" href="Kontakt.html">Contact</a>
-                    <a class="nav-link" href="#">Mouse</a>
-                    <a class="nav-link" href="#">Gaming-chairs</a>
-                    
+                    <a class="nav-link" href="products.html">Headsets</a>
+                    <a class="nav-link" href="products.html">Keyboards</a>
+                    <a class="nav-link" href="products.html">Gaming-PC</a>
+                    <a class="nav-link" href="products.html">Monitors</a>
+                    <a class="nav-link" href="products.html">Mouse</a>
+                    <a class="nav-link" href="products.html">Gaming-chairs</a>
                 </div>
             </div>
         </div>
     </nav>
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+</body>
+</html>
