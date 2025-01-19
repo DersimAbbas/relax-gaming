@@ -1,39 +1,41 @@
-const cartItems = []; // Stores cart items
+const gamingProducts = [
+    {
+      name: "Steelseries-wireless-pro",
+      price: 999,
+      image: "Images/logitech-wireless.png",
+      category: "Headsets"
+    },
 
-// Function to add item to the cart
-function addToCart(itemName, itemPrice) {
-    cartItems.push({ name: itemName, price: itemPrice });
-    updateCart();
-}
+    {
+        name: "Glorious-model-o",
+        price: 599,
+        image: "Images/glorious-model-o",
+        category: "Mouse"
+    },
 
-// Function to update the cart dropdown
-function updateCart() {
-    const cartDropdown = document.getElementById('cart-dropdown');
-    cartDropdown.innerHTML = ''; // Clear previous items
+    {
+      name: "Logitech-G-Pro",
+      price: 799,
+      image: "Images/logitech-keyboard",
+      category: "Keyboards"
+    },
 
-    let totalPrice = 0;
-
-    // Populate dropdown with items
-    cartItems.forEach((item, index) => {
-        const listItem = document.createElement('li');
-        listItem.innerHTML = `<a class="dropdown-item" href="#">${item.name} - $${item.price.toFixed(2)}</a>`;
-        cartDropdown.appendChild(listItem);
-        totalPrice += item.price;
-    });
-
-    // Add divider and total price
-    if (cartItems.length > 0) {
-        const divider = document.createElement('li');
-        divider.innerHTML = '<hr class="dropdown-divider">';
-        cartDropdown.appendChild(divider);
-
-        const totalItem = document.createElement('li');
-        totalItem.innerHTML = `<a class="dropdown-item" href="#"><strong>Total: $${totalPrice.toFixed(2)}</strong></a>`;
-        cartDropdown.appendChild(totalItem);
-    } else {
-        // Display "Cart is empty" if no items
-        const emptyMessage = document.createElement('li');
-        emptyMessage.innerHTML = '<a class="dropdown-item" href="#">Cart is empty</a>';
-        cartDropdown.appendChild(emptyMessage);
+    {
+        name: "secretlab-chair-dva",
+        price: 2999,
+        image: "Images/secretlab-gaming-chair",
+        category: "Gaming-chair"
     }
-}
+  
+
+  ];
+  let cart = [];
+
+  function loadServices() {
+    const service
+  }
+  
+  
+
+
+ 

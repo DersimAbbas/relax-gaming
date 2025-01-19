@@ -24,7 +24,6 @@
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" ></span>
             </button>
-
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="index.html">
                     <div class="d-flex align-items-center">
@@ -45,8 +44,13 @@
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link active"href="products.html">Products</a>
+                    </li>
+
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="user-cart">
                           <i class="bi bi-cart4"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -62,15 +66,15 @@
         </div>
     </nav>
 
-    <nav class="navbar navbar-expand-lg bg-primary" style="margin: 0;">
+    <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container justify-content-center">
-            
-            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProducts" aria-controls="navbarProducts" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarProducts">
                 <div class="navbar-nav">
                     <a class="nav-link" href="products.html">Headsets</a>
                     <a class="nav-link" href="products.html">Keyboards</a>
-                    <a class="nav-link" href="products.html">Gaming-PC</a>
-                    <a class="nav-link" href="products.html">Monitors</a>
                     <a class="nav-link" href="products.html">Mouse</a>
                     <a class="nav-link" href="products.html">Gaming-chairs</a>
                 </div>
@@ -78,85 +82,303 @@
         </div>
     </nav>
 
-    <main class="text-center my-5">
-        <div class="justify-content-center row g-5">
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <img src="Images/logitech-wireless.png" class="card-img-top mx-auto">
-                    <div class="card-body">
-                        <h5 style="font-weight: bolder;">Headsets</h5>
-                        <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
-                        <a href="#" class="btn btn-success">BUY NOW</a>
+    <main class="text-center">
+        <section class=" my-3 pb-3" id="products-top">
+        
+            <h1>Gaming products</h1>
+            <p class="fs-6 fw-normal">Our gaming products are selected based on professional opinions and used by thousands of satisfied customers.</p>
+            <div class="justify-content-center row g-3">
+                <div class="col-12 col-md-6 col-lg-2">
+                    <div class="card h-100">
+                        <img src="Images/logitech-wireless.png" class="card-img-top mx-auto my-5">
+                        <div class="card-body">
+                            <h5 style="font-weight: bolder;">Headsets</h5>
+                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads with 7.1 Surround System that is used in the E-sports scene.</p>
+                            <a href="#" class="btn btn-success" id="steelseries-pro">BUY NOW</a>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-12 col-md-6 col-lg-2">
+                    <div class="card h-100">
+                        <img src="Images/logitech-keyboard.png" class="card-img-top mx-auto my-5">
+                        <div class="card-body">
+                            <h4 style="font-weight: bolder;">Keyboards</h4>
+                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional mechanical keyboards<br>
+                                with every click your finger won't get enough of.</p>
+                            <a href="#" class="btn btn-success">BUY NOW</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-2">
+                    <div class="card h-100">
+                        <img src="Images/glorious-model-o.webp" class="card-img-top mx-auto my-5">
+                        <div class="card-body">
+                            <h4 style="font-weight: bolder;">Mouse</h4>
+                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Best rated gaming mice used by professionals & casuals<br>
+                                Popular brands such as Razer & Glorious and Steelseries.</p>
+                            <a href="#" class="btn btn-success">BUY NOW</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12 col-md-6 col-lg-2">
+                    <div class="card h-100">
+                        <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                        <div class="card-body">
+                            <h4 style="font-weight: bolder;">Gaming-Chairs</h4>
+                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                            <a href="#" class="btn btn-success">BUY NOW</a>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <img src="Images/keyboard-mouse.jpg" class="card-img-top mx-auto">
-                    <div class="card-body">
-                        <h2 style="font-weight: bolder;">Keyboard & Mouse</h2>
-                        <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional keyboards %.</p>
-                        <a href="#" class="btn btn-success">BUY NOW</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="card h-100">
-                    <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
-                    <div class="card-body">
-                        <h5 style="font-weight: bolder;">Headsets</h5>
-                        <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
-                        <a href="#" class="btn btn-success">BUY NOW</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </section>
 
-        <div class="justify-content-center row gx-3 gy-3"> <!-- Adjust spacing between columns and rows -->
-            <h1 class="text-center mb-4">Shop by brands</h1>
+        <section id="Headsets-products" class=" mt-5 mb-2">
+            <div class="justify-content-center row">
+                <h2>Categories</h2>
+                <h3>Headsets</h3>
+                <div class="justify-content-center row g-2">
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/logitech-wireless.png" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success" id="steelseries-pro">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
         
-            <div class="col-12 col-md-6 col-lg-2 text-center"> <!-- Uniform column size -->
-                <div class="btn-group">
-                    <a id="razer-products" href="Kontakt.html" style="text-decoration: none; color: inherit;">
-                        <h2>Razer</h2>
-                    </a>
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/keyboard-mouse.jpg" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h2 style="font-weight: bolder;">Keyboard</h2>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional keyboards %.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="Mouse-products" class=" mt-5 mb-2">
+            <div class="justify-content-center row">
+                <h2>Mouse</h2>
+                <div class="justify-content-center row g-2">
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/logitech-wireless.png" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success" id="steelseries-pro">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
         
-            <div class="col-12 col-md-6 col-lg-2 text-center">
-                <div class="btn-group">
-                    <a id="steelseries-products" href="Kontakt.html" style="text-decoration: none; color: inherit;">
-                        <h2>Steelseries</h2>
-                    </a>
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/keyboard-mouse.jpg" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h2 style="font-weight: bolder;">Keyboard</h2>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional keyboards %.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="keyboards-products" class=" mt-5 mb-2">
+            <div class="justify-content-center row">
+                <h2>Keyboards</h2>
+                <div class="justify-content-center row g-2">
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/logitech-wireless.png" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success" id="steelseries-pro">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
         
-            <div class="col-12 col-md-6 col-lg-2 text-center">
-                <div class="btn-group">
-                    <a id="corsair-products" href="Kontakt.html" style="text-decoration: none; color: inherit;">
-                        <h2>Corsair</h2>
-                    </a>
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/keyboard-mouse.jpg" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h2 style="font-weight: bolder;">Keyboard</h2>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional keyboards %.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
+        </section>
+
+        <section id="gaming-chair-products" class=" mt-5 mb-2">
+            <div class="justify-content-center row">
+                <h2>Gaming-Chairs</h2>
+                <div class="justify-content-center row g-2">
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/logitech-wireless.png" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success" id="steelseries-pro">BUY NOW</a>
+                            </div>
+                        </div>
+                    </div>
         
-            <div class="col-12 col-md-6 col-lg-2 text-center">
-                <div class="btn-group">
-                    <a id="glorious-products" href="Kontakt.html" style="text-decoration: none; color: inherit;">
-                        <h2>Glorious</h2>
-                    </a>
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/keyboard-mouse.jpg" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h2 style="font-weight: bolder;">Keyboard</h2>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional keyboards %.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-5 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-2">
+                        <div class="card card-products h-100">
+                            <img src="Images/secretlab-chair.webp" class="card-img-top mx-auto">
+                            <div class="card-body">
+                                <h5 style="font-weight: bolder;">Headsets</h5>
+                                <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads.</p>
+                                <a href="#" class="btn btn-success">Add to cart</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-        
-            <div class="col-12 col-md-6 col-lg-2 text-center">
-                <div class="btn-group">
-                    <a id="logitech-products" href="Kontakt.html" style="text-decoration: none; color: inherit;">
-                        <h2>Logitech</h2>
-                    </a>
-                </div>
-            </div>
-        </div>
+        </section>
+
+
     </main>
         
     <footer>
