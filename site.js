@@ -33,11 +33,14 @@ function loadProducts () {
     })
 }
 
-
+let nextCartId = 0;
 function addToCart(productId) {
     const product = gamingProducts.find((p) => p.productId === productId); // Find by productId
     if (product) {
-        cart.push(product);
+
+        let cartProduct = {...product, productId: ++nextCartId};
+
+        cart.push(cartProduct);
         updateCartIcon();
         console.log(product.name);
         console.log(cart);
