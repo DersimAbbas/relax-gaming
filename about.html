@@ -16,8 +16,8 @@
     about page
     goods page:
      --> 
-    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
+ 
+     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
         <div class="container-lg">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon" ></span>
@@ -37,11 +37,11 @@
 
                 <ul class="navbar-nav me-auto fs-4">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        <a class="nav-link"href="index.html">Home</a>
                     </li>
                 
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link active" aria-current="page">About</a>
                     </li>
 
                     <li class="nav-item">
@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalCart" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                           <i class="bi bi-cart4"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -65,90 +65,48 @@
         </div>
     </nav>
 
-    <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header justify-content-center">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Items in cart:</h1>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-              ...
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
-          </div>
-        </div>
-      </div>
-
     <nav class="navbar navbar-expand-lg bg-primary" style="margin: 0;">
         <div class="container justify-content-center">
+            
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="products.html#Headsets-products">Headsets</a>
-                    <a class="nav-link" href="products.html#keyboards-products">Keyboards</a>
-                    <a class="nav-link" href="products.html#Mouse-products">Mouse</a>
-                    <a class="nav-link" href="products.html#gaming-chair-products">Gaming-chairs</a>
+                    <a class="nav-link" href="products.html">Headsets</a>
+                    <a class="nav-link" href="products.html">Keyboards</a>
+                    <a class="nav-link" href="products.html">Gaming-PC</a>
+                    <a class="nav-link" href="products.html">Monitors</a>
+                    <a class="nav-link" href="products.html">Mouse</a>
+                    <a class="nav-link" href="products.html">Gaming-chairs</a>
                 </div>
             </div>
         </div>
     </nav>
-    
-    <main class="text-center my-5">
-        <h1>Comfort enhances performance.</h1>
-        <p class="fs-5 fw-semibold">playing in competitive environment can take a toll on our bodies. In stressful games it is easy to forget our posture and how tense we tend to be.<br>
-            Comfort-Gaming's products ensures that gamers can maintain their performance while being comfortable.</p>
-            <div id="carouselExample" class="carousel slide">
+    <main class="text-center">
+        <h1>About</h1>
+        <p class="fs-6 fw-semibold">We at Comfort-gaming (Dersim + Zane) started this company after experiencing "Gaming" injuries ourselves.<br>
+            It's easy to forget to take care of your body during intense gaming sessions. This was one of several reasons why we started<br>
+             our company
+            to help other gamers and atleast make sure everyone is comfortable while playing for many hours.</p>
+        <h2>Contact:</h2>
+        <p class="fs-6 fw-semibold fst-italic"> Email: comfortgaming-contact@outlook.com<br>
+        tel: +460901391<br>
 
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="Images/faker.jpg" class="carousel-img" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/lolarena.jpg" class="carousel-img" alt="...">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="Images/comfy.jpg" class="carousel-img" alt="...">
-                  </div>
-                </div>
-
-                <button class="carousel-control-prev carousel-control" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <button class="carousel-control-next carousel-control" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon"></span>
-                </button>
-
-            </div>
-            <p class="my-3 fs-4 fw-semibold">So what are you waiting for? Take a look on our goods!</p>
-
-            <div class=" justify-content-center row mx-auto">
-                <div class="col-10 col-md-6 col-lg-1">
-                    <a class="link-dark" href="products.html#Headsets-products">
-                         <i class="bi bi-headset" style="font-size: 4em; color:black"></i>
-                        <p class="fw-bolder">Headsets</p>
-                    </a>
-
-                </div>
-                <div class="col-12 col-md-6 col-lg-1">
-                    <a class="link-dark" href="products.html#keyboards-products">
-                        <i class="bi bi-keyboard-fill" style="font-size: 4em;"></i>
-                       <p class="fw-bolder">Keyboards</p>
-                   </a>
-
-                </div>
-                <div class="col-12 col-md-6 col-lg-1">
-                    <a class="link-dark" href="products.html#Mouse-products">
-                     <i class="bi bi-mouse2-fill" style="font-size: 4em;"></i>
-                    <p class="fw-bolder">Mouse</p>
-                    </a>
-                </div>
-
-
-            </div>    
+        <a class="link-info fs-2" href="https://www.linkedin.com/in/dersimabbas/" target="_blank">
+            <i class="bi bi-linkedin"></i>
+        </a></p>
+        <h3>Adress:</h3>
+        <p class="fs-6 fw-semibold"> by Clicking on this map you'll find the adress to our store.</p>
         
+        <iframe 
+            style="min-height: 400px; min-width: 350px;"
+            class="img-fluid"
+             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3937.1746518520977!2d12.018629977911269!3d57.76904843492116!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x464ff5083d93af57%3A0x8af2b3908bf6fb81!2sHj%C3%A4llbo%20Center!5e1!3m2!1sen!2sse!4v1737285634431!5m2!1sen!2sse">
+            allowfullscreen
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+
     </main>
+
     <footer>
         <div class="container">
             <div class="row text-center text-md-start">
@@ -184,7 +142,5 @@
     </footer>
 
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
-    <script src="site.js"></script>
 </body>
-
 </html>
