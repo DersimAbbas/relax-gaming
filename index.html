@@ -49,7 +49,7 @@
                     </li>
 
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="modal" data-bs-target="#modalCart" aria-expanded="false">
                           <i class="bi bi-cart4"></i>
                         </a>
                         <ul class="dropdown-menu">
@@ -65,14 +65,32 @@
         </div>
     </nav>
 
+    <div class="modal fade" id="modalCart" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header justify-content-center">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Items in cart:</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              ...
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
     <nav class="navbar navbar-expand-lg bg-primary" style="margin: 0;">
         <div class="container justify-content-center">
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="products.html">Headsets</a>
-                    <a class="nav-link" href="products.html">Keyboards</a>
-                    <a class="nav-link" href="products.html">Mouse</a>
-                    <a class="nav-link" href="products.html">Gaming-chairs</a>
+                    <a class="nav-link" href="products.html#Headsets-products">Headsets</a>
+                    <a class="nav-link" href="products.html#keyboards-products">Keyboards</a>
+                    <a class="nav-link" href="products.html#Mouse-products">Mouse</a>
+                    <a class="nav-link" href="products.html#gaming-chair-products">Gaming-chairs</a>
                 </div>
             </div>
         </div>
@@ -107,21 +125,21 @@
 
             <div class=" justify-content-center row mx-auto">
                 <div class="col-10 col-md-6 col-lg-1">
-                    <a class="link-dark" href="products.html">
+                    <a class="link-dark" href="products.html#Headsets-products">
                          <i class="bi bi-headset" style="font-size: 4em; color:black"></i>
                         <p class="fw-bolder">Headsets</p>
                     </a>
 
                 </div>
                 <div class="col-12 col-md-6 col-lg-1">
-                    <a class="link-dark" href="products.html">
+                    <a class="link-dark" href="products.html#keyboards-products">
                         <i class="bi bi-keyboard-fill" style="font-size: 4em;"></i>
                        <p class="fw-bolder">Keyboards</p>
                    </a>
 
                 </div>
                 <div class="col-12 col-md-6 col-lg-1">
-                    <a class="link-dark" href="products.html">
+                    <a class="link-dark" href="products.html#Mouse-products">
                      <i class="bi bi-mouse2-fill" style="font-size: 4em;"></i>
                     <p class="fw-bolder">Mouse</p>
                     </a>
@@ -166,6 +184,7 @@
     </footer>
 
     <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="site.js"></script>
 </body>
 
 </html>

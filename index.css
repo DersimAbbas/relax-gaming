@@ -2,6 +2,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    scrollbar-width: none;
 }
 main {
  flex-grow: 1;
@@ -39,13 +40,15 @@ footer a:hover {
     text-decoration: underline;
 }
 .card-products {
-    border-radius: 10px;
-    border-color: #001D3D;
-    
+    border: solid 1px transparent;
 }
+   
+    
 
-.card-img-top{
-   width: 150px;
+.card-img-top {
+   
+    height: 150px;
+    width: 150px;
 }
 
 .carousel-img{
@@ -55,7 +58,7 @@ footer a:hover {
     
 
 }
- 
+
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
   height: 100px;
