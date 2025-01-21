@@ -33,11 +33,14 @@ function loadProducts () {
     })
 }
 
-
+let nextCartId = 0;
 function addToCart(productId) {
     const product = gamingProducts.find((p) => p.productId === productId); // Find by productId
     if (product) {
-        cart.push(product);
+
+        let cartProduct = {...product, productId: ++nextCartId};
+
+        cart.push(cartProduct);
         updateCartIcon();
         console.log(product.name);
         console.log(cart);
@@ -51,12 +54,16 @@ function addToCart(productId) {
 
 
 function createCard(product){
+
+    const formattedName = product.name.split(' ').length > 1
+    ? `${product.name.split(' ')[0]}<br>${product.name.split(' ').slice(1).join(' ')}`
+    : product.name;
     return  `
     <div class="col-12 col-md-6 col-lg-2">
     <div class="card card-products h-100">
     <img src="${product.image}" class="card-img-top mx-auto">
     <div class="card-body d-flex flex-column mb-3 align-items-center">
-    <h5 style="font-weight: bolder;">${product.name}</h5>
+    <h5 style="font-weight: bolder;">${formattedName}</h5>
     <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
     <button onclick="addToCart(${product.productId})" class="btn btn-success btn-add-to-cart">Add to cart</button>
     
