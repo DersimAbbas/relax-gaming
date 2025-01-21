@@ -1,1 +1,1 @@
-[live-demo](https://dersimabbas.github.io/relax-gaming/products.html#keyboards-products)
+[live-demo](https://dersimabbas.github.io/relax-gaming/index.html)
