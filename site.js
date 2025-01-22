@@ -1,16 +1,25 @@
 import gamingProducts from "./products.js"
 
 
-let cart = [];
+let cartItem = [];
 
-function loadProducts () {
+
+function loadServicesFromStorage() {
+    const cartString = localStorage.getItem("cartItem");
+    if (cartString) {
+        cartItem = JSON.parse(cartString);
+        updateCartIcon();
+    }
+};
+
+function loadProducts() {
+    loadServicesFromStorage();
     const headsetsProducts = document.getElementById("headsets-products");
     const KeyboardProducts = document.getElementById("keyboards-products");
     const mouseProducts = document.getElementById("mouse-products");
     const chairProducts = document.getElementById("gaming-chair-products");
-
     gamingProducts.forEach((product) => {
-        switch (product.category){
+        switch (product.category) {
             case "Keyboards":
                 KeyboardProducts.innerHTML += createCard(product);
                 break;
@@ -28,8 +37,8 @@ function loadProducts () {
                 break;
 
         }
-        
-            
+
+
     })
 }
 
@@ -38,27 +47,29 @@ function addToCart(productId) {
     const product = gamingProducts.find((p) => p.productId === productId); // Find by productId
     if (product) {
 
-        let cartProduct = {...product, productId: ++nextCartId};
+        let cartProduct = { ...product, productId: ++nextCartId };
 
-        cart.push(cartProduct);
+        cartItem.push(cartProduct);
         updateCartIcon();
         console.log(product.name);
-        console.log(cart);
-        
+        console.log(cartItem);
+        saveCartToStorage();
+
     } else {
         console.error("Product not found for productId:", productId); // Debugging
         console.log("error.");
         alert("error", productId);
     }
+
 }
 
 
-function createCard(product){
+function createCard(product) {
 
     const formattedName = product.name.split(' ').length > 1
-    ? `${product.name.split(' ')[0]}<br>${product.name.split(' ').slice(1).join(' ')}`
-    : product.name;
-    return  `
+        ? `${product.name.split(' ')[0]}<br>${product.name.split(' ').slice(1).join(' ')}`
+        : product.name;
+    return `
     <div class="col-12 col-md-6 col-lg-2">
     <div class="card card-products h-100">
     <img src="${product.image}" class="card-img-top mx-auto">
@@ -72,23 +83,28 @@ function createCard(product){
     </div>
     `;
 }
-  function updateCartIcon() {
-      const cartCount = document.getElementById("cart-count");
-      cartCount.innerText = cart.length; // Update the count
+function updateCartIcon() {
+    const cartCount = document.getElementById("cart-count");
+    cartCount.innerText = cartItem.length; // Update the count
+}
+
+function saveCartToStorage() {
+    localStorage.setItem("cartItem", JSON.stringify(cartItem));
+}
+
+
+function populateCartModal() {
+    const cartModalBody = document.getElementById("cart-modal-body");
+    cartModalBody.innerHTML = ""; // Clear previous items
+    if (cartItem.length === 0) {
+        cartModalBody.innerHTML = "<p>Your cart is empty!</p>";
+        checkoutButton.style.display = "none";
+        return;
     }
-    
-    function populateCartModal() {
-        const cartModalBody = document.getElementById("cart-modal-body");
-        cartModalBody.innerHTML = ""; // Clear previous items
-        
-        if (cart.length === 0) {
-            cartModalBody.innerHTML = "<p>Your cart is empty!</p>";
-            return;
-        }
-        
-        // Populate items
-        cart.forEach((item, index) => {
-            const itemHtml = `
+    checkoutButton.style.display = "block";
+    // Populate items
+    cartItem.forEach((item, index) => {
+        const itemHtml = `
             <div class="cart-item d-flex justify-content-between align-items-center">
             <div class="cart-item-info">
             <img src="${item.image}" alt="${item.name}" style="width: 50px; height: 50px;">
@@ -101,22 +117,50 @@ function createCard(product){
             </div>
             <hr>
             `;
-            cartModalBody.innerHTML += itemHtml;
-        });
-    }
+        cartModalBody.innerHTML += itemHtml;
+    });
+    let totalPrice = cartItem.reduce((total, item) => total + item.price, 0);
+    const totalHtml = `
+        <div class="cart-total d-flex justify-content-between align-items-center mt-3">
+            <span><strong>Total:</strong></span>
+            <span><strong>${totalPrice}:-</strong></span>
+        </div>
+    `;
+    cartModalBody.innerHTML += totalHtml;
+}
 
-    function removeFromCart(productId) {
-        // Filter out the product with the matching productId
-        cart = cart.filter((product) => product.productId !== productId);
-        updateCartIcon(); // Update the cart count
-        populateCartModal(); // Re-render the modal
-      }
-
+function removeFromCart(productId) {
+    // Filter out the product with the matching productId
+    cartItem = cartItem.filter((product) => product.productId !== productId);
+    populateCartModal(); // Re-render the modal
+    updateCartIcon(); // Update the cart count
+    saveCartToStorage();
+}
+function clearCart() {
+    cartItem = [];
+    updateCartIcon();
+    saveCartToStorage();
+  };
 const cartButton = document.getElementById("user-cart");
-
+const checkoutButton = document.getElementById("checkout-btn");
 cartButton.addEventListener("click", () => {
     populateCartModal();
 })
+checkoutButton.addEventListener("click", () => {
+    if (cartItem.length > 0) {
+        const cartModalBody = document.getElementById("cart-modal-body");
+        cartModalBody.innerHTML = `
+            <div class="text-center">
+                <p>Thanks for the purchase and have a nice day!</p>
+            </div>
+        `;
+      clearCart();
+    
+    }
+    checkoutButton.style.display = "none";    
+      
+});
+
 
 window.onload = loadProducts;
 window.addToCart = addToCart;

@@ -1,19 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GamingProducts</title>
     <link href="bootstrap/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="index.css" rel="stylesheet">
-    
+
 </head>
-<body>       
+
+<body>
     <nav class="navbar navbar-expand-lg bg-body-tertiary navbar-bg">
         <div class="container-lg">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon" ></span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
                 <a class="navbar-brand" href="index.html">
@@ -23,24 +26,25 @@
                     </div>
                 </a>
                 <form class="d-flex container-fluid" role="search">
-                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-primary" type="submit">Search</button>
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-primary" type="submit">Search</button>
                 </form>
 
                 <ul class="navbar-nav me-auto fs-4">
                     <li class="nav-item">
-                        <a class="nav-link"href="index.html">Home</a>
+                        <a class="nav-link" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active"href="products.html">Products</a>
+                        <a class="nav-link active" href="products.html">Products</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle"  href="#" role="button" data-bs-toggle="modal" data-bs-target="#cartModal" aria-expanded="false" id="user-cart">
-                          <i class="bi bi-cart4"></i>
-                          <span id="cart-count" class="badge bg-danger">0</span>
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="modal"
+                            data-bs-target="#cartModal" aria-expanded="false" id="user-cart">
+                            <i class="bi bi-cart4"></i>
+                            <span id="cart-count" class="badge bg-danger">0</span>
                         </a>
                     </li>
                 </ul>
@@ -51,25 +55,25 @@
 
     <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
         <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" id="cart-modal-body">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="Close-btn">Close</button>
+                    <button type="button" class="btn btn-success" id="checkout-btn">Checkout</button>
+                </div>
             </div>
-            <div class="modal-body" id="cart-modal-body">
-              <!-- Cart items will be dynamically inserted here -->
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-success">Checkout</button>
-            </div>
-          </div>
         </div>
-      </div>
-      
+    </div>
+
     <nav class="navbar navbar-expand-lg bg-primary">
         <div class="container justify-content-center">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProducts" aria-controls="navbarProducts" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarProducts"
+                aria-controls="navbarProducts" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarProducts">
@@ -85,27 +89,32 @@
 
     <main class="text-center">
         <section class=" my-3 pb-3" id="products-top">
-        
             <h1>Gaming products</h1>
-            <p class="fs-6 fw-normal">Our gaming products are selected based on professional opinions and used by thousands of satisfied customers.</p>
+            <p class="fs-6 fw-normal">Our gaming products are selected based on professional opinions and used by
+                thousands of satisfied customers.</p>
             <div class="justify-content-center row g-3">
                 <div class="col-12 col-md-6 col-lg-2">
                     <div class="card h-100">
                         <img src="Images/Headsets/hyperX-cloud2.webp" class="card-img-top mx-auto my-5">
                         <div class="card-body d-flex flex-column mb-3 align-items-center">
                             <h4 style="font-weight: bolder;">Headsets</h4>
-                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable Headsets that fits and adjusts to any ears and heads with 7.1 Surround System that is used in the E-sports scene.</p>
+                            <p class="card-text"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                Comfortable Headsets that fits and adjusts to any ears and heads with 7.1 Surround
+                                System that is used in the E-sports scene.</p>
                             <a href="#headsets-products" class="btn btn-success btn-products">BUY NOW</a>
                         </div>
                     </div>
                 </div>
-    
+
                 <div class="col-12 col-md-6 col-lg-2">
                     <div class="card h-100">
                         <img src="Images/Keyboards/razer-keyboard.png" class="card-img-top mx-auto my-5">
                         <div class="card-body card-body d-flex flex-column mb-3 align-items-center">
                             <h4 style="font-weight: bolder;">Keyboards</h4>
-                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Comfortable and Professional mechanical keyboards<br>
+                            <p class="card-text"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">
+                                Comfortable and Professional mechanical keyboards<br>
                                 with every click your finger won't get enough of.</p>
                             <a href="#keyboards-products" class="btn btn-success">BUY NOW</a>
                         </div>
@@ -117,20 +126,24 @@
                         <img src="Images/Mouse/razer-mouse.png" class="card-img-top mx-auto my-5">
                         <div class="card-body card-body d-flex flex-column mb-3 align-items-center">
                             <h4 style="font-weight: bolder;">Mouse</h4>
-                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Best rated gaming mice used by professionals & casuals<br>
+                            <p class="card-text"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Best
+                                rated gaming mice used by professionals & casuals<br>
                                 Popular brands such as Razer & Glorious and Steelseries.</p>
                             <a href="#mouse-products" class="btn btn-success">BUY NOW</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-12 col-md-6 col-lg-2">
                     <div class="card h-100">
                         <img src="Images/Chairs/secretlab-dota2.webp" class="card-img-top mx-auto my-5">
                         <div class="card-body d-flex flex-column mb-3 align-items-center">
                             <h4 style="font-weight: bolder;">Secretlab Chairs</h4>
-                            <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Used by popular Twitch streamers<br>
-                            such as KakashiDota. This elegant chair will fit your needs and support any posture.</p>
+                            <p class="card-text"
+                                style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Used
+                                by popular Twitch streamers<br>
+                                such as KakashiDota. This elegant chair will fit your needs and support any posture.</p>
                             <a href="#gaming-chair-products" class="btn btn-success">BUY NOW</a>
                         </div>
                     </div>
@@ -142,7 +155,7 @@
             <div class="justify-content-center row">
                 <h2>Categories</h2>
                 <h3>Headsets</h3>
-                <div class="justify-content-center row g-2" id="headsets-products"></div>   
+                <div class="justify-content-center row g-2" id="headsets-products"></div>
             </div>
         </section>
 
@@ -163,7 +176,7 @@
         <section class=" mt-5 mb-2">
             <div class="justify-content-center row g-2">
                 <h2>Gaming-Chairs</h2>
-                <div class="justify-content-center row g-2" id="gaming-chair-products"></div>   
+                <div class="justify-content-center row g-2" id="gaming-chair-products"></div>
             </div>
         </section>
     </main>
@@ -174,9 +187,9 @@
                 <div class="col-12 col-md-4">
                     <h5>Contact</h5>
                     <ul class="list-unstyled">
-                        <li><a href="#">Email</a></li>
-                        <li><a href="#">Phone</a></li>
-                        <li><a href="#">Location</a></li>
+                        <li><a href="about.html#email">Email</a></li>
+                        <li><a href="about.html">Phone</a></li>
+                        <li><a href="about.html">Location</a></li>
                     </ul>
                 </div>
                 <div class="col-12 col-md-4">
@@ -201,7 +214,8 @@
             </div>
         </div>
     </footer>
-<script src="bootstrap/bootstrap.bundle.min.js"></script>
-<script src="site.js" type="module"></script>  
+    <script src="bootstrap/bootstrap.bundle.min.js"></script>
+    <script src="site.js" type="module"></script>
 </body>
+
 </html>
