@@ -1,0 +1,8 @@
+{
+    "appService.zipIgnorePattern": [
+        "node_modules{,/**}",
+        ".vscode{,/**}"
+    ],
+    "appService.defaultWebAppToDeploy": "/subscriptions/886682cb-8c0d-46cd-ba2c-3ceb60c1fcc2/resourceGroups/Cloud24-RG-DA/providers/Microsoft.Web/sites/comfortgaming",
+    "appService.deploySubpath": "."
+}
