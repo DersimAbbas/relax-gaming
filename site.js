@@ -44,12 +44,14 @@ function loadProducts() {
 
 let nextCartId = 0;
 function addToCart(productId) {
+    const goods = gamingProducts[productId];
     const product = gamingProducts.find((p) => p.productId === productId); // Find by productId
     if (product) {
 
         let cartProduct = { ...product, productId: ++nextCartId };
 
         cartItem.push(cartProduct);
+        displayToast(goods.name);
         updateCartIcon();
         console.log(product.name);
         console.log(cartItem);
@@ -76,7 +78,7 @@ function createCard(product) {
     <div class="card-body d-flex flex-column mb-3 align-items-center">
     <h5 style="font-weight: bolder;">${formattedName}</h5>
     <p class="card-text" style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"></p>
-    <button onclick="addToCart(${product.productId})" class="btn btn-success btn-add-to-cart">Add to cart</button>
+    <button id="buy-btn" onclick="addToCart(${product.productId})" class="btn btn-success btn-add-to-cart">Add to cart</button>
     
     </div>
     </div>
@@ -140,7 +142,7 @@ function clearCart() {
     cartItem = [];
     updateCartIcon();
     saveCartToStorage();
-  };
+};
 const cartButton = document.getElementById("user-cart");
 const checkoutButton = document.getElementById("checkout-btn");
 cartButton.addEventListener("click", () => {
@@ -154,12 +156,21 @@ checkoutButton.addEventListener("click", () => {
                 <p>Thanks for the purchase and have a nice day!</p>
             </div>
         `;
-      clearCart();
-    
+        clearCart();
+
     }
-    checkoutButton.style.display = "none";    
-      
+    checkoutButton.style.display = "none";
+
 });
+
+function displayToast(productName) {
+    const toastBody = document.querySelector("#cart-toast .toast-body");
+    toastBody.textContent = `Added ${productName} to your cart.`;
+    const toastElement = document.getElementById("cart-toast");
+    const toast = new bootstrap.Toast(toastElement);
+    toast.show();
+}
+
 
 
 window.onload = loadProducts;
